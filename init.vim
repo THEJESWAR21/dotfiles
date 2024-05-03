@@ -10,10 +10,21 @@ call plug#end()
 
 " Configs
 :set number
+:set wildmode=longest,list
 :set autoindent
-:set syntax=ON
-filetype plugin indent on
+:set shiftwidth=4
+:set tabstop=4
+:set expandtab
+:set hlsearch
+:set incsearch
+
+
+syntax on
 colorscheme gruvbox
+
+filetype plugin on
+filetype plugin indent on
+
 
 " Airline
 let g:airline_theme='gruvbox'
