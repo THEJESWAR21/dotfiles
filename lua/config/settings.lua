@@ -1,3 +1,4 @@
+-- Variables
 local set = vim.opt
 
 -- Editor options

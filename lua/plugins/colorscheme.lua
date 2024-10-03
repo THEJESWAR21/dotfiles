@@ -19,4 +19,3 @@ return {
 -- colorscheme tokyonight-storm
 -- colorscheme tokyonight-day
 -- colorscheme tokyonight-moon
-

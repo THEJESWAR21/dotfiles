@@ -17,6 +17,7 @@ return {
             autotag = {
                 enable = true,
             },
+            -- Language Syntax
             ensure_installed = {
                 "json",
                 "markdown",
