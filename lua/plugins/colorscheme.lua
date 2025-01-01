@@ -1,5 +1,5 @@
 return {
-    "morhetz/gruvbox",
+    "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
     terminal_colors = true,
@@ -10,9 +10,11 @@ return {
         vim.g.gruvbox_italic = 1
 
         -- Apply the Gruvbox colorscheme
-        vim.cmd("colorscheme gruvbox")
+        vim.cmd("colorscheme tokyonight-night")
     end, 
 }
+
+-- colorscheme gruvbox
 
 -- " There are also colorschemes for the different styles.
 -- colorscheme tokyonight-night
