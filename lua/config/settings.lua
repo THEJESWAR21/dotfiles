@@ -6,6 +6,7 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Editor Options
-
+vim.opt.clipboard = "unnamedplus"
 set.number = true
+
 

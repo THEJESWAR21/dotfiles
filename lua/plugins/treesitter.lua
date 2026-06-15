@@ -6,45 +6,25 @@ return {
         "windwp/nvim-ts-autotag",
     },
     config = function()
-        local treesitter = require("nvim-treesitter")
+	require("nvim-treesitter").setup({
+	ensure_installed = {
+		"lua",
+		"vim",
+		"vimdoc",
+		"markdown",
+		"markdown_inline",
+		"css",
+		"javascript",
+		"typescript",
+		"python",
+	},
+	ignore_install = {},
+	sync_install = false,
+	auto_install = true,
+	highlight = {
+		enable = true,
+	},
+})
+ end
 
-        treesitter.setup({
-            highlight = {
-                enable = true,
-                additional_vim_regex_highlighting = false,
-            },
-            indent = { enable = true },
-            autotag = {
-                enable = true,
-            },
-            -- Language Syntax
-            ensure_installed = {
-                "json",
-                "markdown",
-                "lua",
-                "vim",
-                "gitignore",
-                "python"
-            },
-            incremental_selection = {
-                enable = true,
-                keymaps = {
-                    init_selection = "<C-space>",
-                    node_incremental = "C-space",
-                    scope_incremental = false,
-                    node_decremental = "<bs>",
-                },
-            },
-            rainbow = {
-                enable = true,
-                disable = { "html" },
-                extended_mode = false,
-                max_file_lines = nil,
-            },
-            context_commentstring = {
-                enable = true,
-                enable_autocmd = false,
-            },
-        })
-    end,
 }
