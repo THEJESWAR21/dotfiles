@@ -1,5 +1,6 @@
 return {
     "nvim-treesitter/nvim-treesitter",
+    "tree-sitter/tree-sitter-python",
     event = { "BufReadPre", "BufNewFile", },
     build = ":TSUpdate",
     dependencies = {
@@ -8,9 +9,9 @@ return {
     config = function()
 	require("nvim-treesitter").setup({
 	ensure_installed = {
+		"help",
 		"lua",
 		"vim",
-		"vimdoc",
 		"markdown",
 		"markdown_inline",
 		"css",
@@ -24,6 +25,8 @@ return {
 	highlight = {
 		enable = true,
 	},
+
+	require("nvim-ts-autotag").setup()
 })
  end
 
