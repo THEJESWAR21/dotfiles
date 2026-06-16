@@ -8,6 +8,7 @@ return {
         -- Configurations
 	vim.g.gruvbox_termcolors = 256
 	vim.g.gruvbox_contrast_dark = 'hard'
+
 	vim.g.gruvbox_italic = 1
         -- vim.cmd("colorscheme tokyonight-night")
 	vim.cmd("colorscheme gruvbox")
