@@ -18,6 +18,7 @@ return {
 
         vim.diagnostic.config({
             signs = false, -- stops lsps from showing signs in a sidebar
+            underline = false,
             virtual_text = {
                 severity = {
                     min = vim.diagnostic.severity.WARN,

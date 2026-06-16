@@ -1,6 +1,6 @@
 return {
-    -- "folke/tokyonight.nvim",
-    "morhetz/gruvbox",
+    "folke/tokyonight.nvim",
+    -- "morhetz/gruvbox",
     lazy = false,
     priority = 1000,
     terminal_colors = true,
@@ -10,8 +10,8 @@ return {
 	vim.g.gruvbox_contrast_dark = 'hard'
 
 	vim.g.gruvbox_italic = 1
-        -- vim.cmd("colorscheme tokyonight-night")
-	vim.cmd("colorscheme gruvbox")
+        vim.cmd("colorscheme tokyonight-night")
+	-- vim.cmd("colorscheme gruvbox")
     end, 
 }
 
