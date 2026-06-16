@@ -1,5 +1,4 @@
-return {
-    "neovim/nvim-lspconfig",
+return { "neovim/nvim-lspconfig",
     opt = {},
     dependencies = {
         { "mason-org/mason.nvim", opts = {} },
@@ -15,6 +14,8 @@ return {
                 "pyright",
             }
         })
+
+        end
 
         vim.diagnostic.config({
             signs = false, -- stops lsps from showing signs in a sidebar
@@ -35,6 +36,9 @@ return {
                 vim.keymap.set('n', 'gD', function() vim.lsp.buf.declaration() end, opts)
                 vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
                 vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end, opts)
+                vim.keymap.set("i", "<C-s>", function() vim.lsp.buf.signature_help() end, opts)
+
+                
             end,
         })
 
