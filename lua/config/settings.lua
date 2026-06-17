@@ -6,6 +6,9 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], { desc = 'Exit terminal mode' })
 
+
+
+
 -- vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 -- vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
@@ -32,6 +35,8 @@ vim.opt.wrap = false
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
+
 vim.opt.termguicolors = true
 vim.opt.updatetime = 50
+vim.opt.syntax = "on"
 -- vim.opt.colorcolumn = "80"

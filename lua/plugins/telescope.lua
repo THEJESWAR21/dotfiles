@@ -1,5 +1,5 @@
-return {
-    'nvim-telescope/telescope.nvim', version = '*',
+return { 'nvim-telescope/telescope.nvim', version = '*',
+
     dependencies = {
         'nvim-lua/plenary.nvim',
         -- optional but recommended
@@ -19,8 +19,6 @@ return {
 	   vim.keymap.set('n', '<leader>ps', function()
 		   builtin.grep_string({ search = vim.fn.input("Grep > ")});
 		end)
-
-	    
 	end
 }
 
