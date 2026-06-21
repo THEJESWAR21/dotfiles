@@ -10,7 +10,9 @@ return {
 	vim.g.gruvbox_contrast_dark = 'hard'
 	vim.g.gruvbox_italic = 1
     -- vim.cmd("colorscheme tokyonight-night")
+    -- vim.o.background = "dark"
 	vim.cmd("colorscheme gruvbox")
+
     end, 
 
 }

@@ -1,12 +1,12 @@
 return {
     "nvim-treesitter/nvim-treesitter",
-    "tree-sitter/tree-sitter-python",
-    event = { "BufReadPre", "BufNewFile", },
+    lazy = false,
+    -- event = { "BufReadPre", "BufNewFile", },
     build = ":TSUpdate",
     config = function()
-        require("nvim-treesitter").setup({
-        ensure_installed = {
-            "help",
+        local ts = require("nvim-treesitter")
+
+        ts.install({
             "lua",
             "vim",
             "markdown",
@@ -16,14 +16,17 @@ return {
             "javascript",
             "typescript",
             "python",
-        },
-        ignore_install = {},
-        sync_install = false,
-        auto_install = true,
-        highlight = {
-            enable = true,
-        },
-    })
+
+        })
+
+        -- Enable Tree-sitter features
+        vim.api.nvim_create_autocmd("FileType", {
+            callback = function ()
+                pcall(vim.treesitter.start)
+
+                vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+            end,
+        })
 
 
  end

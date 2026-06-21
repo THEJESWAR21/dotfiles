@@ -20,5 +20,3 @@ return { 'nvim-telescope/telescope.nvim', version = '*',
 		end)
 	end
 }
-
-
