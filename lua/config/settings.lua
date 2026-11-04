@@ -2,6 +2,10 @@
 local set = vim.opt
 vim.g.mapleader = " "
 
+if vim.loader then
+  vim.loader.enable()
+end
+
 -- Keymaps
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], { desc = 'Exit terminal mode' })
@@ -19,6 +23,9 @@ vim.keymap.set("n", "<leader>st", function()
 -- Editor Options
 vim.opt.clipboard = "unnamedplus"
 set.number = true
+
+-- vim.opt.wrap = true
+vim.opt.linebreak = true
 
 -- Setting Indeting to 4 spaces from 8
 vim.opt.tabstop = 4
