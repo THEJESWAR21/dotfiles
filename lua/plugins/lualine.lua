@@ -7,7 +7,6 @@ return {
             options = {
                 icons_enabled = true,
                 theme = 'powerline_dark',
-                -- globalstatus = true ,
                 always_show_tabline = true,
             },
 

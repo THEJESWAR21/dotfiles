@@ -16,6 +16,11 @@ return { "neovim/nvim-lspconfig",
         require("mason-lspconfig").setup({
             ensure_installed = {
                 "lua_ls",
+                "html",
+                "cssls",
+                "ts_ls",
+                "emmet_ls",
+                "ruff",
                 "pyrefly"
             }
         })

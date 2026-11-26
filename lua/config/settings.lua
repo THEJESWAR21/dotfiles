@@ -39,8 +39,9 @@ vim.opt.wrap = false
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
-
 vim.opt.termguicolors = true
-vim.opt.updatetime = 50
+vim.opt.updatetime = 250
 vim.opt.syntax = "on"
+
+-- vim.opt.notermguicolors = true
 -- vim.opt.colorcolumn = "80"
